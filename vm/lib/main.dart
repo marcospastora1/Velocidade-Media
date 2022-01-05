@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Velocidade Média',
       initialBinding: Binding(),
       initialRoute: '/home',
+      debugShowCheckedModeBanner: false,
       getPages: [
-        GetPage(name: '/home', page: ()=> const HomePage(), binding: Binding())
+        GetPage(name: '/home', page: ()=> const HomePage(), binding: Binding()),
       ],
     );
   }
