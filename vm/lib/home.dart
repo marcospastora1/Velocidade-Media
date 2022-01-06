@@ -19,30 +19,20 @@ class HomePage extends GetView<HomeController> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 10,
-            right: 10,
-            top: 50,
-          ),
+            left: 10, right: 10, top: 50),
           child: Form(
             key: controller.keyForm,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Icon(
-                  Icons.directions_car,
-                  size: 120,
-                ),
+                const Icon(Icons.directions_car, size: 120),
                 TextFormField(
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
-                    labelText: 'Distancia (Km)',
-                    labelStyle: TextStyle(
-                      fontSize: 20,
-                      color: Colors.blue,
-                    ),
-                  ),
+                    labelText: 'Distancia (Km)', labelStyle: TextStyle(
+                      fontSize: 20, color: Colors.blue)),
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                  style: const TextStyle(fontSize: 20, color: Colors.blue),
                   controller: controller.distController,
                   validator: controller.valDist,
                 ),
@@ -50,10 +40,7 @@ class HomePage extends GetView<HomeController> {
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
                     labelText: 'Tempo (Hrs)',
-                    labelStyle: TextStyle(
-                      fontSize: 20,
-                      color: Colors.blue,
-                    ),
+                    labelStyle: TextStyle(fontSize: 20, color: Colors.blue),
                   ),
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 20, color: Colors.blue),

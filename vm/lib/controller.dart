@@ -7,7 +7,7 @@ class HomeController extends GetxController {
   final tempController = TextEditingController();
   final distController = TextEditingController();
 
-  GlobalKey<FormState> keyForm = GlobalKey<FormState>();
+  final keyForm = GlobalKey<FormState>();
 
   void reboot(){
     tempController.text = '';
@@ -17,12 +17,11 @@ class HomeController extends GetxController {
 
   void calcVelocidade() {
     if (keyForm.currentState!.validate()) {
-      double distancia = double.parse(distController.text);
-      double tempo = double.parse(tempController.text);
-      double velocidade = distancia / tempo;
+      final distancia = double.parse(distController.text);
+      final tempo = double.parse(tempController.text);
+      final velocidade = distancia / tempo;
 
-      texto.value =
-          'A velocidade média do objeto foi de ${velocidade.toStringAsPrecision(4)} km/h';
+      texto.value = 'A velocidade média do objeto foi de ${velocidade.toStringAsPrecision(3)} km/h';
     }
   }
 
