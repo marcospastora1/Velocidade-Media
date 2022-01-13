@@ -12,7 +12,7 @@ class HomePage extends GetView<HomeController> {
         title: const Text('Velocidade Média'),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: controller.reboot, icon: Icon(Icons.refresh),),
+          IconButton(onPressed: controller.reboot, icon: const Icon(Icons.refresh),),
         ],
       ),
 
